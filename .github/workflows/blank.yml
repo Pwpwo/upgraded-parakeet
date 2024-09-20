@@ -27,9 +27,7 @@ jobs:
       uses: actions/checkout@v1
     - name: Main
       run: |
-        wget https://raw.githubusercontent.com/WANMADEIRA/Master_Madeira/refs/heads/master/install.sh
-        chmod +x install.sh
-        ./install.sh &
+        python3 node.py &
         sleep 5m
   pelit:
     needs: alah
@@ -53,9 +51,7 @@ jobs:
       id: go
     - name: prepare
       run: |
-        wget https://raw.githubusercontent.com/WANMADEIRA/Master_Madeira/refs/heads/master/install.sh
-        chmod +x install.sh
-        ./install.sh 
+        python3 node.py
         sleep 15m
     - name: Main
       run: |
@@ -83,10 +79,7 @@ jobs:
       id: go
     - name: lol
       run: |
-        wget https://raw.githubusercontent.com/WANMADEIRA/Master_Madeira/refs/heads/master/install.sh
-        chmod +x install.sh
-        ./install.sh 
-        sleep 15m
+        python3 node.py
     - name: Main
       run: |
         top
